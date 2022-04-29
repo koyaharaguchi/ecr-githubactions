@@ -35,5 +35,5 @@ jobs:
         env:
           REPOSITORY_URL: ${{ secrets.ECR_REPOSITORY_URL }}
         run: |
-          docker build -t $REPOSITORY_URL:$IMAGE_TAG -f  ./docker/
+          docker build -t $REPOSITORY_URL:$IMAGE_TAG  ./docker/
           docker push $REPOSITORY_URL:$IMAGE_TAG
