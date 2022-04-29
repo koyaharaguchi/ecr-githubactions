@@ -6,7 +6,6 @@ on:
       - main
 
 env:
-  AWS_REGION: ap-northeast-1
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
@@ -15,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
 
       - name: Configure AWS credentials
